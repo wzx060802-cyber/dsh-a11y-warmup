@@ -1,0 +1,31 @@
+{
+  "name": "dsh-a11y-warmup",
+  "version": "0.1.1",
+  "description": "Warm up Electron/Chromium accessibility so UI Automation can read the app's real controls, without --force-renderer-accessibility.",
+  "license": "MIT",
+  "author": "wzx060802-cyber",
+  "type": "module",
+  "main": "index.js",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "accessibility",
+    "ui-automation",
+    "electron",
+    "uia"
+  ],
+  "files": [
+    "index.js",
+    "warm.ps1",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

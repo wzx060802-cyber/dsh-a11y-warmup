@@ -1,0 +1,17 @@
+# dsh bundle patch: mounts the accessibility warm-up watcher.
+#
+# Electron/Chromium exposes no web-content UI Automation tree until an
+# accessibility client pings the renderer window with WM_GETOBJECT
+# (UiaRootObjectId). This entry keeps a small PowerShell watcher alive that
+# does exactly that for the configured process names, so `accessibility_tree`,
+# `find`, `invoke`, `set_value` work on Electron apps without starting the app
+# with --force-renderer-accessibility.
+- insert:
+    - id: a11y-warmup
+      name: 'dsh-a11y-warmup'
+      config:
+        # Process names (without .exe) whose Chromium renderers get warmed.
+        targets:
+          - DeepSeek Harness
+        # Re-scan interval in milliseconds. New windows are picked up here.
+        intervalMs: 4000
