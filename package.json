@@ -6,6 +6,14 @@
   "author": "wzx060802-cyber",
   "type": "module",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wzx060802-cyber/dsh-a11y-warmup.git"
+  },
+  "homepage": "https://github.com/wzx060802-cyber/dsh-a11y-warmup#readme",
+  "bugs": {
+    "url": "https://github.com/wzx060802-cyber/dsh-a11y-warmup/issues"
+  },
   "keywords": [
     "dsh",
     "dsh-plugin",
